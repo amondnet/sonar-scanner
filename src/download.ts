@@ -61,7 +61,7 @@ export async function download(): Promise<void> {
     // Ubuntu: Remove the existing installation of Google Cloud SDK
     await exec.exec(`sudo rm -rf ${UBUNTU_INSTALL_PATH}`);
     await exec.exec(`sudo unzip ${downloadPath} -d ${extractionPath}`);
-    await exec.exec(`sudo mv ${extractedPath} ${targetPath}`);
+    await exec.exec(`sudo mv ${extractedPath}-linux ${targetPath}`);
   } else {
     // Windows and MacOS: simply extract zip file
     await tc.extractZip(downloadPath, extractionPath);
