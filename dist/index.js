@@ -4115,7 +4115,7 @@ function download() {
             // Ubuntu: Remove the existing installation of Google Cloud SDK
             yield exec.exec(`sudo rm -rf ${constants_1.UBUNTU_INSTALL_PATH}`);
             yield exec.exec(`sudo unzip ${downloadPath} -d ${extractionPath}`);
-            yield exec.exec(`sudo mv ${extractedPath} ${targetPath}`);
+            yield exec.exec(`sudo mv ${extractedPath}-linux ${targetPath}`);
         }
         else {
             // Windows and MacOS: simply extract zip file
